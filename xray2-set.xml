@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+
+       <description>EchoAir XrayX2</description>
+    <author>D-ECHO, Didier1963, Helijah, Buckaroo, Zakharov,... (see README file)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">xray2-yasim</aero>
+
+    <startup>
+      <splash-texture>Aircraft/EchoAirXrayX2/splash.png</splash-texture>
+    </startup>
+
+    <help>
+      <title>EchoAir Xray</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+    </help>
+
+    <rating>
+      <FDM type="int">     1 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+ <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">-0.3082</x-offset-m><!--blender y-->
+     <y-offset-m archive="y">0.6203</y-offset-m><!-- blender z-->
+     <z-offset-m archive="y">-1.9586</z-offset-m><!-- blender x -->
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+  </view>
+     <view n="103">
+    <name>Copilot View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+     <x-offset-m archive="y">0.3082</x-offset-m><!--blender y-->
+     <y-offset-m archive="y">0.6203</y-offset-m><!-- blender z-->
+     <z-offset-m archive="y">-1.9586</z-offset-m><!-- blender x -->
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+  </view>
+     <view n="102">
+    <name>Left Passenger View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+     <x-offset-m archive="y">-0.3082</x-offset-m><!--blender y-->
+     <y-offset-m archive="y">0.5798</y-offset-m><!-- blender z-->
+     <z-offset-m archive="y">-1.0722</z-offset-m><!-- blender x -->
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+  </view>
+     <view n="101">
+    <name>Right Passenger View</name>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
+      <default-pitch-deg type="double">0</default-pitch-deg>
+      <default-heading-deg type="double">0</default-heading-deg>
+      <front-direction-deg type="double">0</front-direction-deg>
+      <front-left-direction-deg type="double">45</front-left-direction-deg>
+      <left-direction-deg type="double">90</left-direction-deg>
+      <back-left-direction-deg type="double">135</back-left-direction-deg>
+      <back-direction-deg type="double">180</back-direction-deg>
+      <back-right-direction-deg type="double">225</back-right-direction-deg>
+      <right-direction-deg type="double">270</right-direction-deg>
+      <front-right-direction-deg type="double">315</front-right-direction-deg>
+     <x-offset-m archive="y">0.3082</x-offset-m><!--blender y-->
+     <y-offset-m archive="y">0.5798</y-offset-m><!-- blender z-->
+     <z-offset-m archive="y">-1.0722</z-offset-m><!-- blender x -->
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+  </view>
+
+ <sound>
+      <path archive="y">Sounds/ea2015-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Models/xray2.xml</path>
+      <show-immat type="bool">1</show-immat>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+      <config>
+        <show-pilot type="bool">       1 </show-pilot>
+        <show-copilot type="bool">     0 </show-copilot>
+        <show-yokes type="bool">       1 </show-yokes>
+        <glass-reflection type="bool"> 1 </glass-reflection>
+        <light-cone type="bool">       1 </light-cone>
+        <details-high type="bool">     1 </details-high>
+      </config>
+    </model>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting> <!-- 15 deg -->
+      <setting> 0.7 </setting> <!-- 60 deg -->
+    </flaps>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                           <!--  0 immat -->
+        <int type="int" n="1">  0 </int>                                           <!--  1 immat -->
+        <int type="int" n="2">  0 </int>                                           <!--  2 immat -->
+        <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
+        <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
+        <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
+        <int type="bool" n="6" alias="/smoke/active"/>                             <!--  6 start smoke -->
+        <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>              <!--  7 particlepersec -->
+        <int type="int" n="8" alias="/sim/model/show-immat"/>                      <!--  8 Show immat -->
+        <int type="int" n="10" alias="controls/armament/trigger"/>                 <!-- 10 reserved for bombable mode -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3" alias="/systems/electrical/outputs/nav-lights"/>
+        <float n="4" alias="/systems/electrical/outputs/landing-lights"/>
+        <float n="5" alias="/systems/electrical/outputs/taxi-lights"/>
+        <float n="6" alias="/systems/electrical/outputs/strobe-lights"/>
+        <float n="7" alias="/systems/electrical/volts"/>
+        <string n="9" type="string" />                                             <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <menubar include="Dialogs/menu.xml"/>
+    <checklists include="Dialogs/checklist/checklists.xml"/>
+
+   
+
+    <weight n="0">
+        <name>Pilot</name>
+        <weight-lb>200</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>100</min-lb>
+    </weight>
+
+    <weight n="1">
+        <name>Copilot</name>
+        <weight-lb>200</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+        <name>Pax</name>
+        <weight-lb>0</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="3">
+        <name>Cargo</name>
+        <weight-lb>0</weight-lb>
+        <max-lb>250</max-lb>
+        <min-lb>0</min-lb>
+    </weight>
+
+  </sim>
+<instrumentation>
+<gnc255a><comm-mode>1</comm-mode></gnc255a>
+<nav-radio>
+  <name>nav</name>
+  <number>0</number>
+</nav-radio>
+
+<nav-radio>
+  <name>nav</name>
+  <number>1</number>
+</nav-radio>
+
+<transponder>
+  <name>transponder</name>
+  <number>0</number>
+  <mode-c-altitude>/instrumentation/encoder/mode-c-alt-ft</mode-c-altitude>
+</transponder>
+</instrumentation>
+
+<controls>
+<gear>
+<blockF1>1</blockF1>
+<blockF2>1</blockF2>
+<blockL1>1</blockL1>
+<blockL2>1</blockL2>
+<blockR1>1</blockR1>
+<blockR2>1</blockR2>
+<brake-parking>1</brake-parking></gear>
+    <lighting>
+      <instrument-lights type="bool">0</instrument-lights>
+      <nav-lights type="bool">0</nav-lights>
+      <strobe type="bool">0</strobe>
+      <landing-lights type="bool">0</landing-lights>
+      <taxi-lights type="bool">0</taxi-lights>
+      <luminosite-lights type="float">0.8</luminosite-lights>
+      <panel-dim type="float">0.5</panel-dim>
+    </lighting>
+ <electric>
+      <battery-switch>0</battery-switch>
+</electric>
+</controls>
+<input>
+ <keyboard>
+  <key n="127">
+   <name>Delete</name>
+   <desc>Toggle Reversers</desc>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine[0]/reverser</property>
+   </binding>
+   <binding>
+    <command>property-toggle</command>
+    <property>controls/engines/engine[1]/reverser</property>
+   </binding>
+  </key>
+ </keyboard>
+</input>
+  <nasal>
+    <doors>
+      <file>Nasal/doors4.nas</file>
+    </doors> 
+<ea5000>
+<file>Models/Panel/Instruments/EA5000/ea5000.nas</file>
+</ea5000><!--
+<kt76c>
+<file>Nasal/kt76c.nas</file>
+</kt76c>-->
+<xray>
+<file>Nasal/light.nas</file>
+<file>Nasal/immat.nas</file>
+<file>Nasal/fuel-cell.nas</file>
+<file>Nasal/Electrical.nas</file>
+<file>Nasal/liveries.nas</file>
+</xray>
+  </nasal>
+
+
+
+
+
+</PropertyList>
+

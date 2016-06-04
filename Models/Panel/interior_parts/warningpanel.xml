@@ -1,0 +1,341 @@
+<PropertyList>
+<path>warningpanel.ac</path>
+<!--Accumulator on/off-->
+<animation>
+  <type>material</type>
+  <object-name>accumulator</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or>
+<not>
+        <property>/controls/electric/battery-switch</property></not>
+</condition>
+  <diffuse>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </diffuse>
+  <ambient>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </ambient>
+<emission>	
+  <red>0.2</red>	
+  <green>0.2</green>	
+  <blue>0.2</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>accumulator</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or>
+        <property>/controls/electric/battery-switch</property>
+</condition>
+  <diffuse>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+<!--Fuel cell on/off-->
+<animation>
+  <type>material</type>
+  <object-name>fuel-cell</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or><not>
+        <property>/systems/electrical/fuel-cell</property></not>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>fuel-cell</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or>
+        <property>/systems/electrical/fuel-cell</property>
+</condition>
+  <diffuse>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+<!--Engine on/off-->
+<animation>
+  <type>material</type>
+  <object-name>engine</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or><not>
+        <property>/engines/engine/running</property></not>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>engine</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or>
+        <property>/engines/engine/running</property>
+</condition>
+  <diffuse>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+<!--Fuel Low-->
+<animation>
+  <type>material</type>
+  <object-name>fuel</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or><greater-than>
+        <property>/consumables/fuel/total-fuel-kg</property>
+<value>20</value>
+</greater-than>
+</condition>
+  <diffuse>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </diffuse>
+  <ambient>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </ambient>
+<emission>	
+  <red>0.2</red>	
+  <green>0.2</green>	
+  <blue>0.2</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>fuel</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or><less-than>
+        <property>/consumables/fuel/total-fuel-kg</property>
+<value>20</value>
+</less-than>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+<!--Flaps extension-->
+<animation>
+  <type>material</type>
+  <object-name>flaps-extended</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or><less-than>
+        <property>/surface-positions/flap-pos-norm</property>
+<value>0.05</value>
+</less-than>
+</condition>
+  <diffuse>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </diffuse>
+  <ambient>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </ambient>
+<emission>	
+  <red>0.2</red>	
+  <green>0.2</green>	
+  <blue>0.2</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>flaps-extended</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or><greater-than>
+        <property>/surface-positions/flap-pos-norm</property>
+<value>0.05</value>
+</greater-than>
+</condition>
+  <diffuse>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>0</red>
+   <green>1</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>0</red>	
+  <green>1</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+
+<!--Fuel Low-->
+<animation>
+  <type>material</type>
+  <object-name>stall</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or>
+<or>
+          <greater-than>
+            <property>velocities/airspeed-kt</property>
+            <value>46</value>
+          </greater-than>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+</or>
+</condition>
+  <diffuse>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </diffuse>
+  <ambient>
+   <red>0.2</red>
+   <green>0.2</green>
+   <blue>0.2</blue>
+  </ambient>
+<emission>	
+  <red>0.2</red>	
+  <green>0.2</green>	
+  <blue>0.2</blue>
+ </emission>
+ </animation>
+<animation>
+  <type>material</type>
+  <object-name>stall</object-name>
+<condition><or>
+        <property>/controls/electric/battery-switch</property>
+        <property>/systems/electrical/fuel-cell</property>
+</or>
+          <less-than>
+            <property>velocities/airspeed-kt</property>
+            <value>46</value>
+          </less-than>
+          <not>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+          </not>
+</condition>
+  <diffuse>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </diffuse>
+  <ambient>
+   <red>1</red>
+   <green>0</green>
+   <blue>0</blue>
+  </ambient>
+<emission>	
+  <red>1</red>	
+  <green>0</green>	
+  <blue>0</blue>
+ </emission>
+ </animation>
+
+</PropertyList>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>EchoAir Xray</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Checklists</label>
+        <binding>
+          <command>dialog-show</command>
+          <dialog-name>checklist</dialog-name>
+        </binding>
+      </item>
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>traveller4.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Toggle wheel chocks and covers</label>
+        <binding>
+          <command>property-toggle</command>
+<property>/sim/model/pitot/coverfree</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+        <property>/sim/model/staticvent/coverfree</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+<property>/controls/gear/blockF1</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+<property>/controls/gear/blockF2</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+<property>/controls/gear/blockL1</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+<property>/controls/gear/blockL2</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+<property>/controls/gear/blockR1</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+<property>/controls/gear/blockR2</property>
+        </binding>
+      </item>
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+<property>controls/electric/battery-switch</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+        <property>/controls/engines/engine/master-alt</property>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+<property>controls/engines/engine/magnetos</property>
+<value>3</value>
+        </binding>
+      <binding>
+       <command>nasal</command>
+       <script>setprop("sim/messages/copilot", "Now press \"s\" to start engine");</script>
+      </binding>
+    </item> <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+    </menu>
+
+  </default>
+
+</PropertyList>

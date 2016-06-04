@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>ea5000.ac</path>
+  
+  <animation>
+    <object-name>ea5000</object-name>
+    <object-name>display.off</object-name>
+    <object-name>display</object-name>
+    <object-name>power</object-name>
+    <object-name>airports</object-name>
+    <object-name>traffic</object-name>
+    <object-name>navaids</object-name>
+    <object-name>fixes</object-name>
+    <object-name>route</object-name>
+    <object-name>centered</object-name>
+    <object-name>range</object-name>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>ea5000</object-name>
+    <object-name>display.off</object-name>
+    <object-name>display</object-name>
+    <object-name>power</object-name>
+    <object-name>airports</object-name>
+    <object-name>traffic</object-name>
+    <object-name>navaids</object-name>
+    <object-name>fixes</object-name>
+    <object-name>route</object-name>
+    <object-name>centered</object-name>
+    <object-name>range</object-name>
+    <condition>
+      <property>/controls/lighting/instrument-lights</property>
+	<or>
+      <property>/controls/electric/battery-switch</property>
+      <property>/systems/electrical/fuel-cell</property>
+	</or>
+    </condition>
+    <emission>
+      <blue>  1 </blue>
+      <red>   1 </red>
+      <green> 1 </green>
+    </emission>
+  </animation>
+
+  
+  <animation>
+    <type>select</type>
+    <object-name>display.off</object-name>
+    <condition>
+      <not><and>
+	<or><and>
+      <property>/controls/electric/battery-switch</property>
+      <property>/systems/electrical/outputs/master-avionics</property>
+</and><and>
+      <property>/systems/electrical/fuel-cell</property>
+      <property>/systems/electrical/outputs/master-avionics</property></and>
+      <property>/systems/electrical/efis-emergency</property>
+	</or>
+        <property>/instrumentation/efis/on</property>
+     </and> </not>
+    </condition>
+  </animation>
+  
+
+  
+  <!-- KNOBS AND BUTTONS -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>emergencyswitch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+      <property>/systems/electrical/efis-emergency</property>
+      </binding>
+    </action>
+  </animation>  <animation>
+    <type>translate</type>
+    <object-name>emergencyswitch</object-name>
+      <property>/systems/electrical/efis-emergency</property>
+<factor>0.01</factor>
+<axis><z>1</z></axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>power</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/efis/on</property>
+      </binding>
+    </action>
+  </animation>
+  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>airports</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/efis/inputs/arpt</property>
+      </binding>
+    </action>
+  </animation>
+  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>traffic</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/efis/inputs/tfc</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>navaids</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/efis/inputs/sta</property>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>fixes</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/efis/inputs/wpt</property>
+      </binding>
+    </action>
+  </animation>
+<!--Route is initially selected...-->
+<animation>
+    <type>pick</type>
+    <object-name>centered</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/instrumentation/efis/inputs/nd-centered</property>
+      </binding>
+    </action>
+  </animation>
+  <!--Range Knob-->
+ <animation>
+        <type>knob</type>
+        <object-name>range</object-name>
+ 
+        <action>
+            <binding>
+                <command>property-adjust</command>
+        <property>/instrumentation/efis/inputs/range-nm</property>
+                <factor>1</factor>
+                <min>1</min>
+                <max>100</max>                
+                <wrap>false</wrap>
+            </binding>
+        </action>
+    </animation>
+  
+</PropertyList>

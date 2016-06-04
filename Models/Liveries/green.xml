@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--This is just a test livery for the livery selection system. It's not intented to be good and will probably be removed as there come more liveries ;)-->
+<PropertyList>
+  
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">Green</name>
+        <texture>Liveries/green.png</texture>
+        <specular>
+          <red>   1 </red>
+          <green> 1 </green>
+          <blue>  1 </blue>
+        </specular>
+      </livery>
+    </model>
+    
+  </sim>
+  
+</PropertyList>
